@@ -1,0 +1,109 @@
+\documentclass[10pt, A4]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{lipsum}
+\usepackage{comment} % environment for multiline comments. 
+\usepackage{amsmath}
+\usepackage{fancyhdr} 		
+\usepackage{framed,color}
+\definecolor{shadecolor}{rgb}{0.9,0.95,1}
+
+% Use this package to modify the width of the pages
+\usepackage[
+    height=9in,		% height of the text block
+    width=7in,		% width of the text block
+    top=78pt,		% distance of the text block from the top of the page
+    headheight=100pt,	% height for the header block
+    headsep=12pt,	% distance from the header block to the text block
+    heightrounded,	% ensure an integer number of lines
+    %showframe,		% show the main blocks
+    verbose,			% show the values of the parameters in the log file
+    inner=3cm,		% width of inner margin
+    outer=3cm		% width of outer margin
+]{geometry}
+
+
+
+
+
+\title{"insert course name here" summary}
+\author{Petter Ideström}
+\date{\today}
+
+
+
+\begin{document}
+
+\begin{titlepage}
+
+
+\maketitle
+\end{titlepage}
+
+\tableofcontents
+
+\newpage 
+
+\section{stuff to repeat/learn }
+
+\begin{itemize}
+\item gauss law 
+\item remember the volume element. 
+\item divergence of 
+\begin{equation}
+\frac{\vec{\hat{r}}}{r^2}
+\end{equation}
+\end{itemize}
+
+
+\section{Electrostatics}
+
+\subsection{coulombs law}
+
+\begin{shaded}
+The force on a test charge $Q$ due to a single point charge $q$, that is at rest a distance $\vec{r_i}$ away is given by coulombs law. 
+\begin{equation}
+\vec{F} = \frac{1}{4\pi \epsilon_0}\frac{qQ}{r_i^2}\vec{\hat{r_i}}
+\end{equation}
+\end{shaded}
+
+\subsection{The electric field}
+
+\begin{shaded}
+If we have several point charges $q_1,q_1,q_3,...,q_n$ at distances $r_1,r_2,r_3,...,r_n$ from $Q$ the total force on $Q$ is. 
+\begin{equation}
+\vec{F} = Q\vec{E}
+\end{equation}
+where 
+\begin{equation}
+\vec{E}(r) \equiv \frac{1}{4\pi \epsilon_0} \sum\limits_{i=1}^n \frac{q_i}{r_i}\vec{\hat{r_i}}
+\end{equation}
+\end{shaded}
+
+if we instead have a distribution of charges that we can approximate with a continuous distribution we get  
+
+\begin{shaded}
+\begin{equation}
+\vec{E}(r) = \frac{1}{4\pi\epsilon_0} \int_V \frac{\vec{\hat{r}}}{r^2} dq
+\end{equation}
+for volumes $dq = \rho d\tau$ is used, for surfaces $dq = \sigma da$ and for lines $dq = \lambda dl$.
+\end{shaded}
+
+\subsection{Gauss law}
+
+\begin{shaded}
+The quantitative statement of gauss law in integral form states that 
+\begin{equation}
+\oint \vec{E} \cdot da = \frac{1}{\epsilon_0} Q_{enc}
+\end{equation}
+where $Q_{enc}$ is the total charge contained within the surface. we can then also write gauss law in differential form: 
+\begin{equation}
+\nabla \cdot \vec{E} = \frac{1}{\epsilon_0}\rho
+\end{equation}
+where $\rho$ is the charge density. 
+\end{shaded}
+%\begin{abstract}
+%\lipsum[10]
+%\end{abstract}
+
+
+\end{document}
